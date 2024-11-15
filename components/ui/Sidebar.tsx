@@ -17,10 +17,10 @@ const Sidebar = ({ user }: SiderbarProps) => {
 				<Link href="/"
 					className="mb-02 cursor-pointer flex items-center gap-2"
 				>
-					<Image src="/icons/logo.svg" 
-						alt="fin1 logo" 
-						width={34} 
-						height={34} 
+					<Image src="/icons/logo.svg"
+						alt="fin1 logo"
+						width={34}
+						height={34}
 						className="size-[24px] max-xl:size-14"
 					/>
 					<h1 className="sidebar-logo">
@@ -28,11 +28,11 @@ const Sidebar = ({ user }: SiderbarProps) => {
 					</h1>
 				</Link>
 
-				{sidebarLinks.map((link) => 				
+				{sidebarLinks.map((link) =>
 				{
 					const isActive = pathname === link.route || pathname.startsWith(`${link.route}/`);
 					return (
-					<Link 
+					<Link
 						href={link.route}
 						key={link.label}
 						className={cn('sidebar-link', {
@@ -40,7 +40,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
 						})}
 					>
 						<div className="relative size-6">
-							<Image 
+							<Image
 								src={link.imgURL}
 								alt={link.label}
 								fill
